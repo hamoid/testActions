@@ -1,0 +1,17 @@
+name: A test
+on:
+  # Allow manual trigger
+  workflow_dispatch:
+
+
+jobs:
+  theThing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: mesa-utils
+          version: 1.0
+      - name: one
+        run: |
+          xvfb-run glxinfo -B
