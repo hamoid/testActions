@@ -1,8 +1,8 @@
 A quick test of caching apt packages in GitHub actions for faster completion of actions.
 
-Here I tested running `xvfb-run glxinfo -B`. In worst case it has taken over 2 minutes in the past. Using caching makes it happen in a second.
+Here I tested running `xvfb-run glxinfo -B`. In worst case it has taken over 2 minutes in the past. Using caching makes it happen in less than 7 seconds.
 
-I also tested having two separate actions that need the same package to see if it's cached for both. It seems to be the case.
+I also tested having two separate actions that need the same apt package to see if it's cached for both. It seems to be the case.
 
 The log shows
 
